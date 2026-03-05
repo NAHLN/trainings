@@ -1,0 +1,3 @@
+PROJ_ROOT/workshops/metagenomics/dc_workshop/docs
+
+💡 PROJ_ROOT is /workspace for codespaces, or where you cloned the repository if you are on a different system.

@@ -1,0 +1,39 @@
+{
+  "name": "Metagenomics Analysis (Python + Micromamba)",
+
+  // Use pre-built image from GitHub Actions workflow
+  // Built from Dockerfile.prebuilt: python:3.9-bullseye + micromamba
+  // Tools: fastqc, trimmomatic, spades, kraken-biom
+  "image": "ghcr.io/meekrob/workshop-codespace-image:latest",
+
+  // Minimal post-create setup (tools already in image)
+  "postCreateCommand": "echo '🧬 Metagenomics environment ready! Tools: fastqc, trimmomatic, spades, kraken-biom'",
+
+  // Update command for prebuilds - clean micromamba cache
+  "updateContentCommand": "/usr/local/bin/micromamba clean -afy",
+
+  // VS Code customizations - minimal extensions only
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "files.watcherExclude": {
+          "**/dc_workshop/results/**": true,
+          "**/dc_workshop/data/**/*.fastq.gz": true
+        }
+      }
+    }
+  },
+
+  // Container environment variables
+  "containerEnv": {
+    "MAMBA_ROOT_PREFIX": "/opt/conda"
+  },
+
+  "waitFor": "postCreateCommand",
+
+  "remoteUser": "codespace"
+}
