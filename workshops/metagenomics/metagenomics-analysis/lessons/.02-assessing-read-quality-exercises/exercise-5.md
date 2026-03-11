@@ -6,5 +6,3 @@
 > Which samples failed at least one of FastQC's quality tests? What
 > test(s) did those samples failed
 >
->
-> **[View Exercise with Solution](.02-assessing-read-quality-exercises/exercise-5.md)**>

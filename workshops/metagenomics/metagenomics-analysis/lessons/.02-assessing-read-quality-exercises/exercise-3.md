@@ -45,5 +45,3 @@
 > E) `~/Desktop/fastqc_html` (or `%USERPROFILE%\Desktop\fastqc_html` on Windows) is a remote path
 > F) `:` divides the host name of your local computer and the path of the file
 >
->
-> **[View Exercise with Solution](.02-assessing-read-quality-exercises/exercise-3.md)**>

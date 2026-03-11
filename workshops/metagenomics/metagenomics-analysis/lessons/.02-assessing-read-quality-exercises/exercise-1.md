@@ -10,7 +10,5 @@
 > d) `tail -n4 JP4D_R1.fastq`  
 > e) `tail -n4 JP4D_R1.fastq | head -n2`  
 >   
->   Do you trust the sequence in this read? 
-> 
+>   Do you trust the sequence in this read?
 >
-> **[View Exercise with Solution](.02-assessing-read-quality-exercises/exercise-1.md)**>

@@ -9,7 +9,5 @@
 > b) `ls -S`  
 > c) `ls -l`  
 > d) `ls -lh`  
-> e) `ls -ahlS`  
->   
+> e) `ls -ahlS`
 >
-> **[View Exercise with Solution](.02-assessing-read-quality-exercises/exercise-2.md)**>
