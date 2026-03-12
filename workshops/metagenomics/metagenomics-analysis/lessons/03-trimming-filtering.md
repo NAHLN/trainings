@@ -260,12 +260,12 @@ $ ls -l -h JP4D*
 
 
 ~~~
--rw-r--r-- 1 dcuser dcuser 179M Nov 26 12:44 JP4D_R1.fastq.gz
--rw-rw-r-- 1 dcuser dcuser 107M Mar 11 23:05 JP4D_R1.trim.fastq.gz
--rw-rw-r-- 1 dcuser dcuser  43M Mar 11 23:05 JP4D_R1un.trim.fastq.gz
--rw-r--r-- 1 dcuser dcuser 203M Nov 26 12:51 JP4D_R2.fastq.gz
--rw-rw-r-- 1 dcuser dcuser 109M Mar 11 23:05 JP4D_R2.trim.fastq.gz
--rw-rw-r-- 1 dcuser dcuser 1.3M Mar 11 23:05 JP4D_R2un.trim.fastq.gz
+-rw-r--r-- 1 codespace codespace 179M Nov 26 12:44 JP4D_R1.fastq.gz
+-rw-rw-r-- 1 codespace codespace 107M Mar 11 23:05 JP4D_R1.trim.fastq.gz
+-rw-rw-r-- 1 codespace codespace  43M Mar 11 23:05 JP4D_R1un.trim.fastq.gz
+-rw-r--r-- 1 codespace codespace 203M Nov 26 12:51 JP4D_R2.fastq.gz
+-rw-rw-r-- 1 codespace codespace 109M Mar 11 23:05 JP4D_R2.trim.fastq.gz
+-rw-rw-r-- 1 codespace codespace 1.3M Mar 11 23:05 JP4D_R2un.trim.fastq.gz
 ~~~
 
 
@@ -340,7 +340,7 @@ JC1A_R2un.trim.fastq.gz  JP4D_R2un.trim.fastq.gz
 > to see whether your per base sequence quality is higher after
 > trimming. 
 > ~~~
-> $ scp dcuser@ec2-34-203-203-131.compute-1.amazonaws.com:../../dc_workshop/data/trimmed_fastq/*.html ~/Desktop/fastqc_html/trimmed
+> $ scp codespace@ec2-34-203-203-131.compute-1.amazonaws.com:../../dc_workshop/data/trimmed_fastq/*.html ~/Desktop/fastqc_html/trimmed
 > ~~~
 > 
 > 

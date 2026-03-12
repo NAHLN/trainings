@@ -13,7 +13,7 @@
 >
 > ~~~
 > $ mkdir ~/Desktop/fastqc_html/trimmed
-> $ scp dcuser@ec2-34-203-203-131.compute-1.amazonaws.com:~/dc_workshop/data/trimmed_fastq/*.html ~/Desktop/fastqc_html/trimmed
+> $ scp codespace@ec2-34-203-203-131.compute-1.amazonaws.com:~/dc_workshop/data/trimmed_fastq/*.html ~/Desktop/fastqc_html/trimmed
 > ~~~
 >
 >

@@ -79,7 +79,7 @@ $ pwd
 You should see the output (your home directory path):
 
 ~~~
-/home/vscode
+/home/codespace
 ~~~
 
 > ## Tip  

@@ -173,7 +173,7 @@ $ ls -l bad-reads-script.sh
 ~~~
 
 ~~~
--rw-rw-r-- 1 vscode vscode 0 Oct 25 21:46 bad-reads-script.sh
+-rw-rw-r-- 1 codespace codespace 0 Oct 25 21:46 bad-reads-script.sh
 ~~~
 
 We see that it says `-rw-r--r--`. This combination shows that the file can be read by any user and written to by the file owner (you). We want to change these permissions so the file can be executed as a program. We use the command `chmod` as we did earlier when we removed write permissions. Here we are adding (`+`) executable permissions (`+x`).
@@ -189,7 +189,7 @@ $ ls -l bad-reads-script.sh
 ~~~
 
 ~~~
--rwxrwxr-x 1 vscode vscode 0 Oct 25 21:46 bad-reads-script.sh
+-rwxrwxr-x 1 codespace codespace 0 Oct 25 21:46 bad-reads-script.sh
 ~~~
 
 Now we see that it says `-rwxr-xr-x`. The `x`'s there now tell us we can run it as a program. So, let us try it! We will need to put `./` at the beginning, so the computer knows to look here in this directory for the program.
@@ -209,10 +209,10 @@ $ ls -lh /workspaces/codespace-metagenomics-shell/dc_workshop/data/untrimmed_fas
 
 ~~~
 total 428M
--rw-r--r-- 1 vscode vscode  24M Nov 26 12:36 JC1A_R1.fastq.gz
--rw-r--r-- 1 vscode vscode  24M Nov 26 12:37 JC1A_R2.fastq.gz
--rw-r--r-- 1 vscode vscode 179M Nov 26 12:44 JP4D_R1.fastq.gz
--rw-r--r-- 1 vscode vscode 203M Nov 26 12:51 JP4D_R2.fastq.gz
+-rw-r--r-- 1 codespace codespace  24M Nov 26 12:36 JC1A_R1.fastq.gz
+-rw-r--r-- 1 codespace codespace  24M Nov 26 12:37 JC1A_R2.fastq.gz
+-rw-r--r-- 1 codespace codespace 179M Nov 26 12:44 JP4D_R1.fastq.gz
+-rw-r--r-- 1 codespace codespace 203M Nov 26 12:51 JP4D_R2.fastq.gz
 ~~~
 
 ## Moving and downloading data

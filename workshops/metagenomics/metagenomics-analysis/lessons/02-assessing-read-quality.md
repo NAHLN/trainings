@@ -304,10 +304,10 @@ $ cd ../../dc_workshop/data/untrimmed_fastq/
 >> 
 >> 
 >> ~~~
->> -rw-r--r-- 1 dcuser dcuser  24M Nov 26 21:34 JC1A_R1.fastq.gz                      
->> -rw-r--r-- 1 dcuser dcuser  24M Nov 26 21:34 JC1A_R2.fastq.gz                      
->> -rw-r--r-- 1 dcuser dcuser 616M Nov 26 21:34 JP4D_R1.fastq              
->> -rw-r--r-- 1 dcuser dcuser 203M Nov 26 21:35 JP4D_R2.fastq.gz   
+>> -rw-r--r-- 1 codespace codespace  24M Nov 26 21:34 JC1A_R1.fastq.gz                      
+>> -rw-r--r-- 1 codespace codespace  24M Nov 26 21:34 JC1A_R2.fastq.gz                      
+>> -rw-r--r-- 1 codespace codespace 616M Nov 26 21:34 JP4D_R1.fastq              
+>> -rw-r--r-- 1 codespace codespace 203M Nov 26 21:35 JP4D_R2.fastq.gz   
 >> ~~~
 >> 
 >> 
@@ -431,17 +431,17 @@ Introduction to the Command Line lesson.
 >
 > - **Mac/Linux or Windows (Git Bash/WSL):**
 >   ```
->   $ scp dcuser@ec2-34-238-162-94.compute-1.amazonaws.com:../../dc_workshop/results/fastqc_untrimmed_reads/*.html ~/Desktop/fastqc_html
+>   $ scp codespace@ec2-34-238-162-94.compute-1.amazonaws.com:../../dc_workshop/results/fastqc_untrimmed_reads/*.html ~/Desktop/fastqc_html
 >   ```
 >
 > - **Windows (PowerShell or Command Prompt):**
 >   ```
->   > scp dcuser@ec2-34-238-162-94.compute-1.amazonaws.com:../../dc_workshop/results/fastqc_untrimmed_reads/*.html %USERPROFILE%\Desktop\fastqc_html
+>   > scp codespace@ec2-34-238-162-94.compute-1.amazonaws.com:../../dc_workshop/results/fastqc_untrimmed_reads/*.html %USERPROFILE%\Desktop\fastqc_html
 >   ```
 >
 > **Questions:** Answer true/false for each statement about the `scp` command:
 >
-> A) `dcuser` is your local user
+> A) `codespace` is your local user
 > B) `ec2-34-238-162-94.compute-1.amazonaws.com` is the address of your remote machine
 > C) The current address of the file goes after the second space in the `scp` command
 > D) `../../dc_workshop/results/fastqc_untrimmed_reads/*.html` is the path of the file you want to download
@@ -449,7 +449,7 @@ Introduction to the Command Line lesson.
 > F) `:` divides the host name of your local computer and the path of the file   
 > 
 >> ## Solution
->>  A) False. `dcuser` is your remote user.  
+>>  A) False. `codespace` is your remote user.  
 >>  B) True. `ec2-34-238-162-94.compute-1.amazonaws.com` is the address of your remote machine  
 >>  C) False. The current address of the file goes after the first space in the `scp` command.  
 >>  D) True. `../../dc_workshop/results/fastqc_untrimmed_reads/*.html` is the path of the file you want to download in the remote machine. 
@@ -505,7 +505,7 @@ We've now looked at quite a few "Per base sequence quality" FastQC graphs, but t
 Now that we've looked at our HTML reports getting a feel for the data,
 let's look more closely at the other output files. Go back to the tab
 in your terminal program that is connected to your Codespace instance
-(the tab label will start with `dcuser@ip`) and make sure you're in
+(the tab label will start with `codespace@ip`) and make sure you're in
 our results subdirectory.   
 
 ~~~

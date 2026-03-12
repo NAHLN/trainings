@@ -77,7 +77,7 @@ $ pwd
 ~~~
 
 ~~~
-/home/vscode/dc_workshop/data
+/home/codespace/dc_workshop/data
 ~~~
 
 From this output, we can see that `..` did indeed take us back one level in our file system. 
@@ -112,7 +112,7 @@ $ ls -l
 
 ~~~
 total 0
--rw-rw-r-- 1 vscode vscode 0 May 27 23:16 youfoundit.txt
+-rw-rw-r-- 1 codespace codespace 0 May 27 23:16 youfoundit.txt
 ~~~
 
 The first part of the output for the `-l` flag gives you information about the file's current permissions. There are ten slots in the
@@ -137,7 +137,7 @@ $ ls -l
 
 ~~~
 total 0
--r--r--r-- 1 vscode vscode 0 May 27 23:16 youfoundit.txt
+-r--r--r-- 1 codespace codespace 0 May 27 23:16 youfoundit.txt
 ~~~
 
 ## Absolute vs. relative paths
@@ -157,20 +157,20 @@ $ pwd
 You will see:
 
 ~~~
-/home/vscode
+/home/codespace
 ~~~
 
 This is the full name of your home directory. This tells you that you
-are in a directory called `vscode`, which sits inside a directory called
+are in a directory called `codespace`, which sits inside a directory called
 `home` which sits inside the very top directory in the hierarchy. The
 very top of the hierarchy is a directory called `/` which is usually
-referred to as the *root directory*. So, to summarize: `vscode` is a
+referred to as the *root directory*. So, to summarize: `codespace` is a
 directory in `home` which is a directory in `/`.
 
 Now enter the following command:
 
 ~~~
-$ cd /home/vscode/dc_workshop/.hidden
+$ cd /home/codespace/dc_workshop/.hidden
 ~~~
 
 This jumps forward multiple levels to the `.hidden` directory. 

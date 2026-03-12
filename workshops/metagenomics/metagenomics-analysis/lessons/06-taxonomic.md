@@ -321,7 +321,7 @@ Importing JP4D.001.krona.input...
 And finally, open another terminal on your local computer, download the 
 Krona output and open it on a browser.
 ~~~
-$ scp dcuser@ec2-3-235-238-92.compute-1.amazonaws.com:../../dc_workshop/taxonomy/JP4D.001.krona.out.html . 
+$ scp codespace@ec2-3-235-238-92.compute-1.amazonaws.com:../../dc_workshop/taxonomy/JP4D.001.krona.out.html . 
 ~~~
 
 You will see a page like this:
@@ -352,7 +352,7 @@ First, we need to download the files needed as inputs in Pavian; this time, we w
 These files correspond to our Kraken reports. Again in our local 
 machine, let us use the `scp` command.  
 ~~~
-$ scp dcuser@ec2-3-235-238-92.compute-1.amazonaws.com:../../dc_workshop/taxonomy/*report . 
+$ scp codespace@ec2-3-235-238-92.compute-1.amazonaws.com:../../dc_workshop/taxonomy/*report . 
 ~~~
 
 We go to the [Pavian demo WebSite](https://fbreitwieser.shinyapps.io/pavian/), 

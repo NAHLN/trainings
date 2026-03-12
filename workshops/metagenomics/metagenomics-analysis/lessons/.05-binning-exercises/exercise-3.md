@@ -5,7 +5,7 @@
 >
 > Fill in the blanks to complete the code you need to download the `quality_JP4D.tsv` to your local computer:
 > ~~~
-> ____ dcuser____ec2-18-207-132-236.compute-1.amazonaws.com____/home/dcuser/dc_workshop/mags/CHECKM/quality_JP4D.tsv ____
+> ____ codespace____ec2-18-207-132-236.compute-1.amazonaws.com____/home/codespace/dc_workshop/mags/CHECKM/quality_JP4D.tsv ____
 > ~~~
 >  
 >

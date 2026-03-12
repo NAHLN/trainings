@@ -123,7 +123,7 @@ i.e.,
 the directory that the computer assumes we want to run commands in
 unless we explicitly specify something else.
 Here,
-the computer's response is your home directory (e.g., `/home/vscode` in Codespaces),
+the computer's response is your home directory (e.g., `/home/codespace` in Codespaces),
 which is the top level directory within your environment:
 
 ~~~
@@ -131,7 +131,7 @@ $ pwd
 ~~~
 
 ~~~
-/home/vscode
+/home/codespace
 ~~~
 
 Let's look at how our file system is organized. We can see what files and subdirectories are in this directory by running `ls`,

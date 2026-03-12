@@ -28,17 +28,17 @@
 >
 > - **Mac/Linux or Windows (Git Bash/WSL):**
 >   ```
->   $ scp dcuser@ec2-34-238-162-94.compute-1.amazonaws.com:~/dc_workshop/results/fastqc_untrimmed_reads/*.html ~/Desktop/fastqc_html
+>   $ scp codespace@ec2-34-238-162-94.compute-1.amazonaws.com:~/dc_workshop/results/fastqc_untrimmed_reads/*.html ~/Desktop/fastqc_html
 >   ```
 >
 > - **Windows (PowerShell or Command Prompt):**
 >   ```
->   > scp dcuser@ec2-34-238-162-94.compute-1.amazonaws.com:~/dc_workshop/results/fastqc_untrimmed_reads/*.html %USERPROFILE%\Desktop\fastqc_html
+>   > scp codespace@ec2-34-238-162-94.compute-1.amazonaws.com:~/dc_workshop/results/fastqc_untrimmed_reads/*.html %USERPROFILE%\Desktop\fastqc_html
 >   ```
 >
 > **Questions:** Answer true/false for each statement about the `scp` command:
 >
-> A) `dcuser` is your local user
+> A) `codespace` is your local user
 > B) `ec2-34-238-162-94.compute-1.amazonaws.com` is the address of your remote machine
 > C) The current address of the file goes after the second space in the `scp` command
 > D) `~/dc_workshop/results/fastqc_untrimmed_reads/*.html` is the path of the file you want to download
