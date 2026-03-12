@@ -20,6 +20,7 @@
       ],
       "settings": {
         "terminal.integrated.defaultProfile.linux": "bash",
+        "terminal.integrated.cwd": "/home/codespace",
         "files.watcherExclude": {
           "**/dc_workshop/results/**": true,
           "**/dc_workshop/data/**/*.fastq.gz": true

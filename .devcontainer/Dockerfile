@@ -48,9 +48,10 @@ RUN /usr/local/bin/micromamba create -n metagenomics -y -c bioconda -c conda-for
     kraken-biom=1.2.0 \
     && /usr/local/bin/micromamba clean -afy
 
-# Auto-activate environment in bash
+# Set up shell integration and conda compatibility
 RUN echo 'eval "$(micromamba shell hook --shell bash)"' >> ~/.bashrc && \
-    echo 'micromamba activate metagenomics' >> ~/.bashrc
+    echo 'conda() { micromamba "$@"; }' >> ~/.bashrc && \
+    echo 'export PS1="\w \$ "' >> ~/.bashrc
 
 # Download Trimmomatic adapters (continue even if it fails)
 RUN wget -P /home/codespace/dc_workshop/data/untrimmed_fastq \
