@@ -1,75 +1,138 @@
 # System Setup Guide and Workbook
 
-This document is intended for you to record important details of your setup so that you can refer to them later.  This will serve as a guide to keep you oriented during the lessons.
+This guide helps you understand your computing environment and record important details for reference during the lessons.
 
-You want to read the sections below and record in your notes the following:
+<mark>!!! Document in process !!!</mark>
 
-* My home directory is:
-* My project root is:
-* My parallel threads available:
+**Fill in your system information:**
 
-### Your home directory
-
-Most Linux systems use a **home directory** but they are not always suitable for computation, which will take place beneath your *project root (see below).* When you log on to a system, it is typically configured for you to start in your home directory.
-
-*Example:* if your user name is **mcmuffin**, your home directory will be `/home/mcmuffin`
-
-On Github Codespaces, your user name is **codespace**, so your home directory will be `/home/codespace`.
-
-
-### Your project root
-
-For these lessons, the **project root** is the location on your server where you have downloaded (or *cloned*) the files for these workshops.
-
-#### On Github Codespaces
-
-If you're viewing this in a GitHub Codespace, then you have downloaded (or *cloned*) the repository automatically into the file path `/workspaces/trainings`.  Although VS Code starts at that location, your terminal will start in your home directory.
-
-Github Codespace project root: `/workspaces/trainings`
-
-#### On an HPC server
-
-On an institutional high performance computing Linux server, there is often a designated space for code and computation.  Example: On my server at Alpine, I decided to put my project root in `/projects/dcking@colostate.edu/trainings`. I have to `cd` to the parent directory and clone the repository.
-
-HPC Server Project root: `/your-project-space` **See your system administrator for more details**
+* My username is: _____________
+* My home directory is: _____________
+* My project root is: _____________
+* My available parallel threads: _____________
 
 ---
 
-### How many parallel threads do I have?
+### Your Home Directory
 
-Note: nomenclature here can be "cores", "virtual CPUs", "threads", or some variation.  We will use **threads** to refer to the value you will pass to bioinformatics programs.
+When you log into a Linux system, you start in your **home directory**. This is your personal space, typically located at `/home/YOUR_USERNAME`.
 
-If you are on a Linux system, including Codespaces, do:
+**On GitHub Codespaces:**
+- Your username is: `codespace`
+- Your home directory is: `/home/codespace`
+- Your terminal starts here by default
 
+**Note:** While this is where you start, most of your computational work will happen in your *project root* (explained below), not your home directory.
+
+---
+
+### Your Project Root
+
+The **project root** is where the workshop files are stored. This is your working directory for all lessons and exercises.
+
+#### On GitHub Codespaces
+
+The repository is automatically cloned to: `/workspaces/trainings`
+
+**Important:**
+- VS Code's file browser shows: `/workspaces/trainings`
+- Your terminal starts at: `/home/codespace`
+- To navigate to the workshop files: `cd /workspaces/trainings`
+
+**Project root:** `/workspaces/trainings`
+
+#### On an HPC Server
+
+On institutional high-performance computing (HPC) servers, you'll have a designated workspace for code and computation.
+
+**Example:** On the Alpine server, a project root might be:
 ```
-nproc
+/projects/dcking@colostate.edu/trainings
 ```
 
-#### Examples
+To set up:
+1. Navigate to your project space: `cd /your-project-space`
+2. Clone the repository: `git clone [repository-url]`
 
-##### Codespaces (Linux in general)
+**Project root:** `/your-project-space/trainings`
 
+⚠️ **Consult your system administrator** for your specific project space location.
+
+---
+
+### How Many Parallel Threads Do I Have?
+
+**Threads** (also called "cores", "virtual CPUs", or "processors") determine how many tasks your system can run simultaneously. Many bioinformatics programs can use multiple threads to run faster.
+
+#### Finding Your Thread Count
+
+**On Linux systems (including Codespaces):**
+```bash
+$ nproc
+```
+
+**On Mac:**
+```bash
+$ sysctl -n hw.logicalcpu
+```
+
+#### Examples by Environment
+
+##### GitHub Codespaces
 ```
 $ nproc
 2
 ```
+Most Codespaces have 2 threads available.
 
-##### AWS Cloud (configured for 4 virtual CPUs)
-
+##### AWS Cloud (Example: 4 virtual CPUs)
 ```
 $ nproc
 4
 ```
 
-##### In a compute job on HPC
+##### HPC Compute Job
+The number of threads is specified **when you submit your job** to the scheduler.
 
-The number of threads is set **per job** when you submit to the scheduler. Use whatever number you requested in your job submission. If you are unsure, use **2** — it is always safe and will not affect your results, only speed.
+**Important:**
+- Use the thread count you requested in your job submission
+- If unsure, use **2** - this is always safe and won't affect results, only speed
+- Check your job script or ask your system administrator
 
-
-##### Mac (not intended for these lessons)
-
+**Example job script:**
+```bash
+#SBATCH --cpus-per-task=8    # This means 8 threads available
 ```
-% sysctl -n hw.logicalcpu
 
+##### Mac (Not Recommended for These Lessons)
+```
+$ sysctl -n hw.logicalcpu
 10
+```
+*Note: These workshops are designed for Linux environments. Mac users should use GitHub Codespaces.*
+
+---
+
+### Quick Reference Commands
+
+**Check where you are:**
+```bash
+$ pwd                    # Print working directory
+```
+
+**Navigate to project root (Codespaces):**
+```bash
+$ cd /workspaces/trainings
+```
+
+**Navigate to home directory:**
+```bash
+$ cd ~                   # or just: cd
+```
+
+**List your environment:**
+```bash
+$ whoami                 # Show your username
+$ pwd                    # Show current directory
+$ nproc                  # Show available threads
 ```
