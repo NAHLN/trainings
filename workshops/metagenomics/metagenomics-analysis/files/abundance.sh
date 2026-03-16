@@ -1,3 +1,8 @@
+#!/usr/bin/env bash
+# This script is not referenced in any lesson,
+# so it maybe a holdover. 
+# It appears to process kraken output and return a OTU table with taxonomic lineage information, 
+# including a "Finding error in taxa" section that identifies deleted and merged taxa.
 
 File=$(basename $1 .kraken)
 Outdir="results"
