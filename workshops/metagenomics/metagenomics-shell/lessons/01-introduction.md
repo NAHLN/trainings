@@ -333,7 +333,9 @@ using the command line shell enables us to make our workflow more efficient and 
 
 ---
 
+> **💡 Navigation Tip:** Click the link below to go to the next lesson. **Do not use your browser's back button or VS Code's back arrow** - these don't work the same way in markdown preview. Always use the lesson links to navigate forward and use the file explorer or Table of Contents to go back.
+
 <p id="top" style="text-align:center";>
     <a href="02-the-filesystem.md">Navigating Files and Directories &rarr;</a>
 </p>
-    
+

@@ -168,4 +168,6 @@ Tools like [OpenRefine](http://www.datacarpentry.org/OpenRefine-ecology-lesson/)
 
 ---
 
+> **💡 Navigation Tip:** Click the link below to go to the next lesson. **Do not use your browser's back button or VS Code's back arrow** - these don't work the same way in markdown preview. Always use the lesson links to navigate forward and use the file explorer or Table of Contents to go back.
+
 [Next lesson: Planning for NGS Projects (02-project-planning.md)](02-project-planning.md)
