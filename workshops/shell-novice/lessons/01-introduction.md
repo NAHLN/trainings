@@ -24,7 +24,7 @@ If you are not familiar with VS Code, see the section below to get oriented.  If
 
 ## VS Code: quick overview
 
-[See VS-CODE-README.md](../VS-CODE-README.md)
+[See VS-CODE-README.md](../../../guides/VS-CODE-README.md)
 
 ### Background
 
@@ -127,6 +127,6 @@ In order to achieve her task, Nelle needs to know how to:
 
 ---
 
-> **💡 Navigation Tip:** Click the link below to go to the next lesson. **Do not use your browser's back button or VS Code's back arrow** - these don't work the same way in markdown preview. Always use the lesson links to navigate forward and use the file explorer or Table of Contents to go back.
-
 <p style="text-align: center;"> <a href="README.md">[ &#127968; &larr; Table of Contents]</a> |  <a href="#top">[&uarr; 01 Top]</a>  | <a href="02-files-directories.md">[02-files and directories &rarr;]</a></p>
+
+> **💡 Navigation Tip: Do not use your browser's back button or VS Code's back arrow** - Always use the lesson links to navigate forward and use the file explorer or Table of Contents to go back.
