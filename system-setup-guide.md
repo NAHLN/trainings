@@ -9,7 +9,7 @@ Use this table to find the correct values for your computing environment. Note, 
 | Environment | Username | Home Directory | Project Root | Compute Threads | Note |
 |------------|----------|----------------|--------------|-----------------| ----- |
 | **GitHub Codespaces** | `codespace` | `/home/codespace` | `/workspaces/trainings` | 2 (use `nproc` to verify) | Can set to 4 in "change machine type" |
-| **AWS EC2** | `ubuntu` | `/home/ubuntu` | `/home/ubuntu/trainings` | 8 for t3a.2xlarge (use `nproc` to verify) | Higher tiers available <a href="guides/img/instance-comparison-with-prices.png" target="_new">(see compute costs)</a>|
+| **AWS EC2** | `ubuntu` | `/home/ubuntu` | `/home/ubuntu/trainings` | 8 for t3a.2xlarge (use `nproc` to verify) | Higher tiers available <a href="guides/AWS/aws-ec2-setup.md#instance-type" target="_new">(compare compute costs)</a>|
 | **HPC Server** (varies) | Commonly your institution ID | `/home/YOUR_ID` | `/projects/YOUR_ID/trainings` (may vary) | Check job script or use 2 as default | Can allocate per job |
 
 

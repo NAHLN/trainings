@@ -125,7 +125,7 @@ Choose based on your needs:
 
 **Select:** `t3a.2xlarge`
 
-**Pricing reference:** Current as of March 2026. See [AWS EC2 Pricing](https://aws.amazon.com/ec2/pricing/on-demand/) or [EC2 Instance Comparison](https://instances.vantage.sh/) for latest rates.
+**Pricing reference:** Current as of March 2026. See  [AWS EC2 Pricing ](https://aws.amazon.com/ec2/pricing/on-demand/) or EC2 Instance Comparison  (<a href="guides/img/instance-comparison-with-prices.png" target="_new">screenshot</a> | <a href="https://instances.vantage.sh/" target="_new">live</a>) for latest rates.
 
 #### Understanding Instance Architecture (x86_64, AMD, ARM)
 
