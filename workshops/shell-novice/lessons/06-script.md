@@ -42,8 +42,8 @@ Let's start by going back to `alkanes/` and creating a new file, `middle.sh` whi
 become our shell script:
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data $ cd alkanes
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/alkanes $ nano middle.sh
+○ /workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data $ cd alkanes
+○ /workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/alkanes $ nano middle.sh
 ~~~
 
 The command `nano middle.sh` opens the file `middle.sh` within the text editor 'nano'
@@ -67,7 +67,7 @@ we can ask the shell to execute the commands it contains.
 Our shell is called `bash`, so we run the following command:
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/alkanes $ bash middle.sh
+○ .../shell-lesson-data/exercise-data/alkanes $ bash middle.sh
 ~~~
 
 ~~~
@@ -100,7 +100,7 @@ in the shell and executing it with a new file name.
 Instead, let's edit `middle.sh` and make it more versatile:
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/alkanes $ nano middle.sh
+○ .../shell-lesson-data/exercise-data/alkanes $ nano middle.sh
 ~~~
 
 Now, within "nano", replace the text `octane.pdb` with the special variable called `$1`:
@@ -114,7 +114,7 @@ Inside a shell script,
 We can now run our script like this:
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/alkanes $ bash middle.sh octane.pdb
+○ .../shell-lesson-data/exercise-data/alkanes $ bash middle.sh octane.pdb
 ~~~
 
 ~~~
@@ -128,7 +128,7 @@ ATOM     13  H           1      -3.172  -1.337   0.206  1.00  0.00
 or on a different file like this:
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/alkanes $ bash middle.sh pentane.pdb
+○ .../shell-lesson-data/exercise-data/alkanes $ bash middle.sh pentane.pdb
 ~~~
 
 ~~~
@@ -156,7 +156,7 @@ Knowing this, we can use additional arguments to define the range of lines to
 be passed to `head` and `tail` respectively:
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/alkanes $ nano middle.sh
+○ .../shell-lesson-data/exercise-data/alkanes $ nano middle.sh
 ~~~
 
 ~~~
@@ -166,7 +166,7 @@ head -n "$2" "$1" | tail -n "$3"
 We can now run:
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/alkanes $ bash middle.sh pentane.pdb 15 5
+○ .../shell-lesson-data/exercise-data/alkanes $ bash middle.sh pentane.pdb 15 5
 ~~~
 
 ~~~
@@ -181,7 +181,7 @@ By changing the arguments to our command, we can change our script's
 behaviour:
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/alkanes $ bash middle.sh pentane.pdb 20 5
+○ .../shell-lesson-data/exercise-data/alkanes $ bash middle.sh pentane.pdb 20 5
 ~~~
 
 ~~~
@@ -197,7 +197,7 @@ but it may take the next person who reads `middle.sh` a moment to figure out wha
 We can improve our script by adding some **comments** at the top:
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/alkanes $ nano middle.sh
+○ .../shell-lesson-data/exercise-data/alkanes $ nano middle.sh
 ~~~
 
 ~~~
@@ -217,7 +217,7 @@ What if we want to process many files in a single pipeline?
 For example, if we want to sort our `.pdb` files by length, we would type:
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/alkanes $ wc -l *.pdb | sort -n
+○ .../shell-lesson-data/exercise-data/alkanes $ wc -l *.pdb | sort -n
 ~~~
 
 because `wc -l` lists the number of lines in the files
@@ -239,7 +239,7 @@ to handle the case of arguments containing spaces
 Here's an example:
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/alkanes $ nano sorted.sh
+○ .../shell-lesson-data/exercise-data/alkanes $ nano sorted.sh
 ~~~
 
 ~~~
@@ -249,7 +249,7 @@ wc -l "$@" | sort -n
 ~~~
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/alkanes $ bash sorted.sh *.pdb ../creatures/*.dat
+○ .../shell-lesson-data/exercise-data/alkanes $ bash sorted.sh *.pdb ../creatures/*.dat
 ~~~
 
 ~~~
@@ -279,7 +279,6 @@ wc -l "$@" | sort -n
 > 2013-11-07,rabbit,18
 > 2013-11-07,bear,1
 > ~~~
-> {: .source}
 >
 > An example of this type of file is given in
 > `shell-lesson-data/exercise-data/animal-counts/animals.csv`.
@@ -307,8 +306,6 @@ wc -l "$@" | sort -n
 > >     cut -d , -f 2 $file | sort | uniq
 > > done
 > > ```
-> > {: .language-bash}
-> {: .solution}
 
 
 Suppose we have just run a series of commands that did something useful --- for example,
@@ -320,7 +317,7 @@ Instead of typing them in again
 we can do this:
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/alkanes $ history | tail -n 5 > redo-figure-3.sh
+○ .../shell-lesson-data/exercise-data/alkanes $ history | tail -n 5 > redo-figure-3.sh
 ~~~
 
 The file `redo-figure-3.sh` now contains:
@@ -344,7 +341,6 @@ we have a completely accurate record of how we created that figure.
 > ~~~
 > $ history | tail -n 5 > recent.sh
 > ~~~
-> {: .language-bash}
 >
 > the last command in the file is the `history` command itself, i.e.,
 > the shell has added `history` to the command log before actually
@@ -356,7 +352,6 @@ we have a completely accurate record of how we created that figure.
 > > to know what that command was, in order to investigate the problem.
 > > Were the command only be recorded after running it, we would not
 > > have a record of the last command run in the event of a crash.
-> {: .solution}
 
 In practice, most people develop shell scripts by running commands
 at the shell prompt a few times
@@ -375,13 +370,13 @@ The easiest way to capture all the steps is in a script.
 
 First we return to Nelle's project directory:
 ```
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/alkanes $ cd ../../north-pacific-gyre/
+○ .../shell-lesson-data/exercise-data/alkanes $ cd ../../north-pacific-gyre/
 ```
 
 She creates a file using `nano` ...
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/north-pacific-gyre $ nano do-stats.sh
+○ .../shell-lesson-data/north-pacific-gyre $ nano do-stats.sh
 ~~~
 
 ...which contains the following:
@@ -399,13 +394,13 @@ She saves this in a file called `do-stats.sh`
 so that she can now re-do the first stage of her analysis by typing:
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/north-pacific-gyre $ bash do-stats.sh NENE*A.txt NENE*B.txt
+○ .../shell-lesson-data/north-pacific-gyre $ bash do-stats.sh NENE*A.txt NENE*B.txt
 ~~~
 
 She can also do this:
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/north-pacific-gyre $ bash do-stats.sh NENE*A.txt NENE*B.txt | wc -l
+○ .../shell-lesson-data/north-pacific-gyre $ bash do-stats.sh NENE*A.txt NENE*B.txt | wc -l
 ~~~
 
 so that the output is just the number of files processed
@@ -444,14 +439,12 @@ Of course, this introduces another tradeoff between flexibility and complexity.
 > head -n $2 $1
 > tail -n $3 $1
 > ~~~
-> {: .language-bash}
 >
 > While you are in the `alkanes` directory, you type the following command:
 >
 > ~~~
 > $ bash script.sh '*.pdb' 1 1
 > ~~~
-> {: .language-bash}
 >
 > Which of the following outputs would you expect to see?
 >
@@ -471,11 +464,10 @@ Of course, this introduces another tradeoff between flexibility and complexity.
 > > $ head -n 1 cubane.pdb ethane.pdb octane.pdb pentane.pdb propane.pdb
 > > $ tail -n 1 cubane.pdb ethane.pdb octane.pdb pentane.pdb propane.pdb
 > > ```
-> > {: .language-bash}
+> >
 > > The shell does not expand `'*.pdb'` because it is enclosed by quote marks.
 > > As such, the first argument to the script is `'*.pdb'` which gets expanded within the
 > > script by `head` and `tail`.
-> {: .solution}
 
 > ## Find the Longest File With a Given Extension
 >
@@ -487,7 +479,6 @@ Of course, this introduces another tradeoff between flexibility and complexity.
 > ~~~
 > $ bash longest.sh shell-lesson-data/exercise-data/alkanes pdb
 > ~~~
-> {: .language-bash}
 >
 > would print the name of the `.pdb` file in `shell-lesson-data/exercise-data/alkanes` that has
 > the most lines.
@@ -496,7 +487,6 @@ Of course, this introduces another tradeoff between flexibility and complexity.
 > ~~~
 > $ bash longest.sh shell-lesson-data/exercise-data/writing txt
 > ~~~
-> {: .language-bash}
 >
 > > ## Solution
 > >
@@ -509,7 +499,6 @@ Of course, this introduces another tradeoff between flexibility and complexity.
 > >
 > > wc -l $1/*.$2 | sort -n | tail -n 2 | head -n 1
 > > ```
-> > {: .language-bash}
 > >
 > > The first part of the pipeline, `wc -l $1/*.$2 | sort -n`, counts
 > > the lines in each file and sorts them numerically (largest last). When
@@ -521,7 +510,6 @@ Of course, this introduces another tradeoff between flexibility and complexity.
 > > line: we can build our pipeline up in pieces to be sure we understand
 > > the output.
 > >
-> {: .solution}
 
 > ## Script Reading Comprehension
 >
@@ -535,7 +523,6 @@ Of course, this introduces another tradeoff between flexibility and complexity.
 > # Script 1
 > echo *.*
 > ~~~
-> {: .language-bash}
 >
 > ~~~
 > # Script 2
@@ -544,13 +531,11 @@ Of course, this introduces another tradeoff between flexibility and complexity.
 >     cat $filename
 > done
 > ~~~
-> {: .language-bash}
 >
 > ~~~
 > # Script 3
 > echo $@.pdb
 > ~~~
-> {: .language-bash}
 >
 > > ## Solutions
 > > In each case, the shell expands the wildcard in `*.pdb` before passing the resulting
@@ -568,8 +553,7 @@ Of course, this introduces another tradeoff between flexibility and complexity.
 > > ```
 > > cubane.pdb ethane.pdb methane.pdb octane.pdb pentane.pdb propane.pdb.pdb
 > > ```
-> > {: .output}
-> {: .solution}
+
 
 > ## Debugging Scripts
 >
@@ -584,14 +568,12 @@ Of course, this introduces another tradeoff between flexibility and complexity.
 >     bash goostats.sh $datafile stats-$datafile
 > done
 > ~~~
-> {: .language-bash}
 >
 > When you run it from the `north-pacific-gyre` directory:
 >
 > ~~~
 > $ bash do-errors.sh NENE*A.txt NENE*B.txt
 > ~~~
-> {: .language-bash}
 >
 > the output is blank.
 > To figure out why, re-run the script using the `-x` option:
@@ -599,7 +581,6 @@ Of course, this introduces another tradeoff between flexibility and complexity.
 > ~~~
 > $ bash -x do-errors.sh NENE*A.txt NENE*B.txt
 > ~~~
-> {: .language-bash}
 >
 > What is the output showing you?
 > Which line is responsible for the error?
@@ -613,7 +594,6 @@ Of course, this introduces another tradeoff between flexibility and complexity.
 > > In this example, we can see that `echo` isn't printing anything. We have made a typo
 > > in the loop variable name, and the variable `datfile` doesn't exist, hence returning
 > > an empty string.
-> {: .solution}
 
 ---
 

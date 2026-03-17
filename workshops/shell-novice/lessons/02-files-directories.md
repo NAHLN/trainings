@@ -429,11 +429,11 @@ Show hidden files by adding the `-a` flag to `ls` (*a* for *all*).
 
 **Output:**
 
-*yours will differ*
+*yours may differ*
 
 ~~~
-.   .bash_history  .bashrc  .config  .dotnet     .lesshst    .npm            .profile        .zprofile
-..  .bash_logout   .cache   .docker  .gitconfig  .oh-my-zsh  .vscode-remote  .zshrc
+..             .bashrc       .config   .gitconfig  .mamba    
+.bash_history  .cache        .copilot  .lesshst    .profile  .viminfo                   
 ~~~
 
 You'll see every entry begins with a dot (`.`). These are called "hidden files". 
@@ -459,8 +459,8 @@ Let's return to our **Project Root**.
 **Commands:**
 
 ~~~
-○ /home/codespace $ cd /workspaces/trainings
-/workspaces/trainings $ pwd
+○ ~ $ cd /workspaces/trainings
+○ /workspaces/trainings $ pwd
 ~~~
 
 **Output:**
@@ -480,14 +480,12 @@ we want a listing of something other than our current working directory:
 **Command:**
 
 ~~~
-○ /workspaces/trainings $ ls -F workshops/shell-novice/shell-lesson-data
+○ /workspaces/trainings $ ls -F workshops/shell-novice
 ~~~
 
-
 ~~~
-exercise-data/  north-pacific-gyre/
+README.md  lessons/  shell-lesson-data/
 ~~~
-
 
 Note that if you are not in the project root `/workspaces/trainings`,
 this command will return an error.
@@ -537,7 +535,7 @@ use the following series of commands to get there:
 ○ /workspaces/trainings/workshops/shell-novice/shell-lesson-data $ cd exercise-data
 ~~~
 
-*(Output is silent)*
+*(Output is silent but prompt will add exercise-data)*
 
 
 These commands will move us into the `shell-lesson-data` directory, then into the `exercise-data` directory.
@@ -790,7 +788,7 @@ which we will dissect into its component parts:
 ○ /workspaces/trainings $ ls -F /
 ~~~
 
-![General syntax of a shell command](../fig/shell_command_syntax.svg)
+![General syntax of a shell command](img/shell_command_syntax.svg)
 
 `ls` is the **command**, with an **option** `-F` and an
 **argument** `/`.
@@ -835,14 +833,13 @@ of files and directories in the root directory `/`.
 An example of the output you might get from the above command is given below:
 
 ~~~
-○ /workspaces/trainings $ ls -F /
+○ /workspaces/trainings/workshops/shell-novice/shell-lesson-data $ ls -F /
 ~~~
 
 
 ~~~
-bin/   etc/   lib64/       mnt/   root/  sys/  var/
-boot/  home/  lost+found/  opt/   run/   tmp/  workspaces/
-dev/   lib/   media/       proc/  sbin/  usr/
+bin/   dev/  home/  lib64/  mnt/  proc/  run/   srv/  tmp/  var/     workspaces/
+boot/  etc/  lib/   media/  opt/  root/  sbin/  sys/  usr/  vscode/
 ~~~
 
 
@@ -922,7 +919,7 @@ and we will see it in many other tools as we go on.
 
 <p style="text-align: center;"> <a href="01-introduction.md">[&larr; 01-Introduction] </a> | 
 <a href="#top">[&uarr; 02 Top]</a> | 
-<a href="02-files-directories.md">[02-files and directories &rarr;]</a>
+<a href="03-create.md">[03-Create &rarr;]</a>
 <br/>
 <a href="README.md">[&#127968; Table of Contents]</a> </p>
 

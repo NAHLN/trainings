@@ -53,7 +53,7 @@ presented on the first three lines, with DNA sequences on the following lines.
 Let's look at the files:
 
 ```
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/creatures $ head -n 5 basilisk.dat minotaur.dat unicorn.dat
+○ .../shell-lesson-data/exercise-data/creatures $ head -n 5 basilisk.dat minotaur.dat unicorn.dat
 ```
 
 ### Syntax
@@ -74,7 +74,7 @@ done
 and we can apply this to our example like this:
 
 ```
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/creatures $ for filename in basilisk.dat minotaur.dat unicorn.dat
+○ .../shell-lesson-data/exercise-data/creatures $ for filename in basilisk.dat minotaur.dat unicorn.dat
 > do
 >     echo $filename
 >     head -n 2 $filename | tail -n 1
@@ -156,7 +156,7 @@ The shell itself doesn't care what the variable is called;
 if we wrote this loop as:
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/creatures $ for x in basilisk.dat minotaur.dat unicorn.dat
+○ .../shell-lesson-data/exercise-data/creatures $ for x in basilisk.dat minotaur.dat unicorn.dat
 > do
 >     head -n 2 $x | tail -n 1
 > done
@@ -165,7 +165,7 @@ if we wrote this loop as:
 or:
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/creatures $ for temperature in basilisk.dat minotaur.dat unicorn.dat
+○ .../shell-lesson-data/exercise-data/creatures $ for temperature in basilisk.dat minotaur.dat unicorn.dat
 > do
 >     head -n 2 $temperature | tail -n 1
 > done
@@ -196,7 +196,6 @@ or a subset of data.
 > > >     echo $loop_variable
 > > > done
 > > ~~~
-> > {: .language-bash}
 > >
 > > ```
 > > 0
@@ -228,7 +227,6 @@ or a subset of data.
 > >     ls *.pdb
 > > done
 > ~~~
-> {: .language-bash}
 >
 > Now, what is the output of the following code?
 >
@@ -372,7 +370,7 @@ Let's continue with our example in the `shell-lesson-data/exercise-data/creature
 Here's a slightly more complicated loop:
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/creatures $ for filename in *.dat
+○ .../shell-lesson-data/exercise-data/creatures $ for filename in *.dat
 > do
 >     echo $filename
 >     head -n 100 $filename | tail -n 20
@@ -386,7 +384,7 @@ The first command, `echo`, prints its command-line arguments to standard output.
 For example:
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/creatures $ echo hello there
+○ .../shell-lesson-data/exercise-data/creatures $ echo hello there
 ~~~
 
 prints:
@@ -401,7 +399,7 @@ since the shell expands `$filename` to be the name of a file,
 Note that we can't write this as:
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/creatures $ for filename in *.dat
+○ .../shell-lesson-data/exercise-data/creatures $ for filename in *.dat
 > do
 >     $filename
 >     head -n 100 $filename | tail -n 20
@@ -468,13 +466,13 @@ but also save a version of the original files. We want to copy the original file
 files named `original-basilisk.dat` and `original-unicorn.dat`, for example. We can't use:
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/creatures $ cp *.dat original-*.dat
+○ .../shell-lesson-data/exercise-data/creatures $ cp *.dat original-*.dat
 ~~~
 
 because that would expand to:
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/creatures $ cp basilisk.dat minotaur.dat unicorn.dat original-*.dat
+○ .../shell-lesson-data/exercise-data/creatures $ cp basilisk.dat minotaur.dat unicorn.dat original-*.dat
 ~~~
 
 This wouldn't back up our files, instead we get an error:
@@ -489,7 +487,7 @@ no directory named `original-*.dat` in the `creatures` directory, we get an erro
 
 Instead, we can use a loop:
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/creatures $ for filename in *.dat
+○ .../shell-lesson-data/exercise-data/creatures $ for filename in *.dat
 > do
 >     cp $filename original-$filename
 > done
@@ -526,7 +524,7 @@ The following diagram
 shows what happens when the modified loop is executed and demonstrates how the
 judicious use of `echo` is a good debugging technique.
 
-![graphic for loop](../fig/shell_script_for_loop_flow_chart.svg)
+![graphic for loop](img/shell_script_for_loop_flow_chart.svg)
 The for loop "for filename in *.dat; do echo cp $filename original-$filename;
 done" will successively assign the names of all "*.dat" files in your current
 directory to the variable "$filename" and then execute the command. With the
@@ -552,8 +550,8 @@ these are ones whose names end in 'A' or 'B', rather than 'Z'.
 Starting from the shell-lesson-data directory, Nelle types:
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data $ cd north-pacific-gyre
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/north-pacific-gyre $ for datafile in NENE*A.txt NENE*B.txt
+○ /workspaces/trainings/workshops/shell-novice/shell-lesson-data $ cd north-pacific-gyre
+○ /workspaces/trainings/workshops/shell-novice/shell-lesson-data/north-pacific-gyre $ for datafile in NENE*A.txt NENE*B.txt
 > do
 >     echo $datafile
 > done
@@ -574,7 +572,7 @@ Prefixing each input file's name with 'stats' seems simple,
 so she modifies her loop to do that:
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/north-pacific-gyre $ for datafile in NENE*A.txt NENE*B.txt
+○ /workspaces/trainings/workshops/shell-novice/shell-lesson-data/north-pacific-gyre $ for datafile in NENE*A.txt NENE*B.txt
 > do
 >     echo $datafile stats-$datafile
 > done
@@ -602,14 +600,14 @@ the shell redisplays the whole loop on one line
 (using semi-colons to separate the pieces):
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/north-pacific-gyre $ for datafile in NENE*A.txt NENE*B.txt; do echo $datafile stats-$datafile; done
+○ .../shell-lesson-data/north-pacific-gyre $ for datafile in NENE*A.txt NENE*B.txt; do echo $datafile stats-$datafile; done
 ~~~
 
 Using the <kbd>←</kbd>,
 Nelle navigates to the `echo` command and changes it to `bash goostats.sh`:
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/north-pacific-gyre $ for datafile in NENE*A.txt NENE*B.txt; do bash goostats.sh $datafile stats-$datafile; done
+○ .../shell-lesson-data/north-pacific-gyre $ for datafile in NENE*A.txt NENE*B.txt; do bash goostats.sh $datafile stats-$datafile; done
 ~~~
 
 When she presses <kbd>Enter</kbd>,
@@ -622,7 +620,7 @@ uses <kbd>↑</kbd> to repeat the command,
 and edits it to read:
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/north-pacific-gyre $ for datafile in NENE*A.txt NENE*B.txt; do echo $datafile;
+○ .../shell-lesson-data/north-pacific-gyre $ for datafile in NENE*A.txt NENE*B.txt; do echo $datafile;
 bash goostats.sh $datafile stats-$datafile; done
 ~~~
 
@@ -778,4 +776,3 @@ so she decides to get some coffee and catch up on her reading.
 <a href="06-script.md">[06-Scripts &rarr;]</a>
 <br/>
 <a href="README.md">[ &#127968; Table of Contents]</a> </p>
-

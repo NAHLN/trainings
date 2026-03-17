@@ -40,7 +40,7 @@ The `.pdb` extension indicates that these files are in Protein Data Bank format,
 a simple text format that specifies the type and position of each atom in the molecule.
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/alkanes $ ls
+○ /workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/alkanes $ ls
 ~~~
 
 ~~~
@@ -51,7 +51,7 @@ ethane.pdb    octane.pdb     propane.pdb
 Let's run an example command:
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/alkanes $ wc cubane.pdb
+○ /workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/alkanes $ wc cubane.pdb
 ~~~
 
 ~~~
@@ -66,7 +66,7 @@ If we run the command `wc *.pdb`, the `*` in `*.pdb` matches zero or more charac
 so the shell turns `*.pdb` into a list of all `.pdb` files in the current directory:
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/alkanes $ wc *.pdb
+○ /workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/alkanes $ wc *.pdb
 ~~~
 
 ~~~
@@ -85,7 +85,7 @@ If we run `wc -l` instead of just `wc`,
 the output shows only the number of lines per file:
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/alkanes $ wc -l *.pdb
+○ /workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/alkanes $ wc -l *.pdb
 ~~~
 
 ~~~
@@ -130,7 +130,7 @@ but what if there were 6000?
 Our first step toward a solution is to run the command:
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/alkanes $ wc -l *.pdb > lengths.txt
+○ /workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/alkanes $ wc -l *.pdb > lengths.txt
 ~~~
 
 The greater than symbol, `>`, tells the shell to **redirect** the command's output to a
@@ -143,7 +143,7 @@ Thus, **redirect** commands require caution.
 `ls lengths.txt` confirms that the file exists:
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/alkanes $ ls lengths.txt
+○ /workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/alkanes $ ls lengths.txt
 ~~~
 
 ~~~
@@ -157,7 +157,7 @@ There's only one file in this case,
 so `cat` just shows us what it contains:
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/alkanes $ cat lengths.txt
+○ /workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/alkanes $ cat lengths.txt
 ~~~
 
 ~~~
@@ -196,7 +196,6 @@ But first we'll do an exercise to learn a little about the sort command:
 > 22
 > 6
 > ~~~
-> {: .source}
 >
 > If we run `sort` on this file, the output is:
 >
@@ -207,7 +206,6 @@ But first we'll do an exercise to learn a little about the sort command:
 > 22
 > 6
 > ~~~
-> {: .output}
 >
 > If we run `sort -n` on the same file, we get this instead:
 >
@@ -224,7 +222,6 @@ But first we'll do an exercise to learn a little about the sort command:
 >
 > > ## Solution
 > > The `-n` option specifies a numerical rather than an alphanumerical sort.
-> {: .solution}
 
 We will also use the `-n` option to specify that the sort is
 numerical instead of alphanumerical.
@@ -232,7 +229,7 @@ This does *not* change the file;
 instead, it sends the sorted result to the screen:
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/alkanes $ sort -n lengths.txt
+○ /workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/alkanes $ sort -n lengths.txt
 ~~~
 
 ~~~
@@ -253,8 +250,8 @@ Once we've done that,
 we can run another command called `head` to get the first few lines in `sorted-lengths.txt`:
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/alkanes $ sort -n lengths.txt > sorted-lengths.txt
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/alkanes $ head -n 1 sorted-lengths.txt
+○ /workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/alkanes $ sort -n lengths.txt > sorted-lengths.txt
+○ /workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/alkanes $ head -n 1 sorted-lengths.txt
 ~~~
 
 ~~~
@@ -277,7 +274,6 @@ the output of `head` must be the file with the fewest lines.
 > ~~~
 > $ sort -n lengths.txt > lengths.txt
 > ~~~
-> {: .language-bash}
 >
 > Doing something like this may give you
 > incorrect results and/or delete
@@ -293,25 +289,21 @@ the output of `head` must be the file with the fewest lines.
 > ~~~
 > $ echo The echo command prints text
 > ~~~
-> {: .language-bash}
 > ~~~
 > The echo command prints text
 > ~~~
-> {: .output}
 >
 > Now test the commands below to reveal the difference between the two operators:
 >
 > ~~~
 > $ echo hello > testfile01.txt
 > ~~~
-> {: .language-bash}
 >
 > and:
 >
 > ~~~
 > $ echo hello >> testfile02.txt
 > ~~~
-> {: .language-bash}
 >
 > Hint: Try executing each command twice in a row and then examining the output files.
 >
@@ -323,7 +315,6 @@ the output of `head` must be the file with the fewest lines.
 > > (in this case`testfile02.txt`),
 > > but appends the string to the file if it already exists
 > > (i.e. when we run it for the second time).
-> {: .solution}
 
 > ## Appending Data
 >
@@ -338,7 +329,6 @@ the output of `head` must be the file with the fewest lines.
 > $ head -n 3 animals.csv > animals-subset.csv
 > $ tail -n 2 animals.csv >> animals-subset.csv
 > ~~~
-> {: .language-bash}
 >
 > 1. The first three lines of `animals.csv`
 > 2. The last two lines of `animals.csv`
@@ -351,7 +341,6 @@ the output of `head` must be the file with the fewest lines.
 > > For option 2 to be correct we would only run the `tail` command.
 > > For option 4 to be correct we would have to pipe the output of `head` into `tail -n 2`
 > >  by doing `head -n 3 animals.csv | tail -n 2 > animals-subset.csv`
-> {: .solution}
 
 
 ## Passing output to another command
@@ -363,7 +352,7 @@ those intermediate files make it hard to follow what's going on.
 We can make it easier to understand by running `sort` and `head` together:
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/alkanes $ sort -n lengths.txt | head -n 1
+○ /workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/alkanes $ sort -n lengths.txt | head -n 1
 ~~~
 
 ~~~
@@ -386,7 +375,7 @@ This removes the need for any intermediate files.
 We'll start by using a pipe to send the output of `wc` to `sort`:
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/alkanes $ wc -l *.pdb | sort -n
+○ /workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/alkanes $ wc -l *.pdb | sort -n
 ~~~
 
 ~~~
@@ -402,7 +391,7 @@ We'll start by using a pipe to send the output of `wc` to `sort`:
 We can then send that output through another pipe, to `head`, so that the full pipeline becomes:
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/alkanes $ wc -l *.pdb | sort -n | head -n 1
+○ /workspaces/trainings/workshops/shell-novice/shell-lesson-data/exercise-data/alkanes $ wc -l *.pdb | sort -n | head -n 1
 ~~~
 
 ~~~
@@ -480,7 +469,6 @@ so that you and other people can put those programs into pipes to multiply their
 > 2012-11-07,rabbit,16
 > 2012-11-07,bear,1
 > ~~~
-> {: .source}
 >
 > What text passes through each of the pipes and the final redirect in the pipeline below?
 > Note, the `sort -r` command sorts in reverse order.
@@ -488,7 +476,7 @@ so that you and other people can put those programs into pipes to multiply their
 > ~~~
 > $ cat animals.csv | head -n 5 | tail -n 3 | sort -r > final.txt
 > ~~~
-> {: .language-bash}
+>
 > Hint: build the pipeline up one command at a time to test your understanding
 > > ## Solution
 > > The `head` command extracts the first 5 lines from `animals.csv`.
@@ -502,8 +490,6 @@ so that you and other people can put those programs into pipes to multiply their
 > > 2012-11-06,deer,2
 > > 2012-11-05,raccoon,7
 > > ```
-> > {: .source}
-> {: .solution}
 
 > ## Pipe Construction
 >
@@ -512,7 +498,6 @@ so that you and other people can put those programs into pipes to multiply their
 > ~~~
 > $ cut -d , -f 2 animals.csv
 > ~~~
-> {: .language-bash}
 >
 > The `cut` command is used to remove or 'cut out' certain sections of each line in the file,
 > and `cut` expects the lines to be separated into columns by a <kbd>Tab</kbd> character.
@@ -531,7 +516,6 @@ so that you and other people can put those programs into pipes to multiply their
 > rabbit
 > bear
 > ~~~
-> {: .output}
 >
 > The `uniq` command filters out adjacent matching lines in a file.
 > How could you extend this pipeline (using `uniq` and another command) to find
@@ -542,8 +526,6 @@ so that you and other people can put those programs into pipes to multiply their
 > > ```
 > > $ cut -d , -f 2 animals.csv | sort | uniq
 > > ```
-> > {: .language-bash}
-> {: .solution}
 
 > ## Which Pipe?
 >
@@ -556,7 +538,6 @@ so that you and other people can put those programs into pipes to multiply their
 > 2012-11-06,rabbit,19
 > ...
 > ~~~
-> {: .output}
 >
 > The `uniq` command has a `-c` option which gives a count of the
 > number of times a line occurs in its input.  Assuming your current
@@ -575,7 +556,6 @@ so that you and other people can put those programs into pipes to multiply their
 > > If you have difficulty understanding why, try running the commands, or sub-sections of
 > > the pipelines (make sure you are in the `shell-lesson-data/exercise-data/animal-counts`
 > > directory).
-> {: .solution}
 
 ## Nelle's Pipeline: Checking Files
 
@@ -584,8 +564,8 @@ and created 17 files in the `north-pacific-gyre` directory described earlier.
 As a quick check, starting from the `shell-lesson-data` directory, Nelle types:
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data $ cd north-pacific-gyre
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/north-pacific-gyre $ wc -l *.txt
+○ /workspaces/trainings/workshops/shell-novice/shell-lesson-data $ cd north-pacific-gyre
+○ /workspaces/trainings/workshops/shell-novice/shell-lesson-data/north-pacific-gyre $ wc -l *.txt
 ~~~
 
 The output is 18 lines that look like this:
@@ -603,7 +583,7 @@ The output is 18 lines that look like this:
 Now she types this:
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/north-pacific-gyre $ wc -l *.txt | sort -n | head -n 5
+○ /workspaces/trainings/workshops/shell-novice/shell-lesson-data/north-pacific-gyre $ wc -l *.txt | sort -n | head -n 5
 ~~~
 
 ~~~
@@ -623,7 +603,7 @@ Before re-running that sample,
 she checks to see if any files have too much data:
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/north-pacific-gyre $ wc -l *.txt | sort -n | tail -n 5
+○ /workspaces/trainings/workshops/shell-novice/shell-lesson-data/north-pacific-gyre $ wc -l *.txt | sort -n | tail -n 5
 ~~~
 
 ~~~
@@ -641,7 +621,7 @@ her lab uses 'Z' to indicate samples with missing information.
 To find others like it, she does this:
 
 ~~~
-/workspaces/trainings/workshops/shell-novice/shell-lesson-data/north-pacific-gyre $ ls *Z.txt
+○ /workspaces/trainings/workshops/shell-novice/shell-lesson-data/north-pacific-gyre $ ls *Z.txt
 ~~~
 
 ~~~
