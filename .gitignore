@@ -5,5 +5,7 @@ dc_workshop.zip
 dc_workshop/
 backup_dc_workshop/
 
+.DS_Store
+
 *.fastq.gz
 
