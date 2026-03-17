@@ -2,6 +2,8 @@
 
 > Teaching: 40 min | Exercises: 10 min
 
+<mark style="background-color:red;padding:3px;color:white;">These lessons use R/RStudio which is not supported in this codespace. You can complete lessons 7-9 on your own computer.</mark>
+
 ## Questions
 - How can we measure diversity?
 - How can I use R to analyze diversity?

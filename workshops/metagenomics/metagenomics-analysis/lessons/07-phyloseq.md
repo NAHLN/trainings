@@ -2,6 +2,8 @@
 
 > Teaching: 20 min | Exercises: 5 min
 
+<mark style="background-color:red;padding:3px;color:white;">These lessons use R/RStudio which is not supported in this codespace. You can complete lessons 7-9 on your own computer.</mark>
+
 ## Questions
 - How can I use my taxonomic assignment results to analyze?
 
