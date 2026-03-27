@@ -19,6 +19,17 @@ header:
 
 Click the button above to launch a fully-configured bioinformatics environment with all tools pre-installed.
 
+### Watch: Launching a Codespace
+
+<video width="100%" controls preload="auto" style="max-width: 100%; height: auto;">
+  <source src="/trainings/assets/videos/nellie-david-launch.mp4" type="video/mp4">
+  Your browser doesn't support the video tag. <a href="/trainings/assets/videos/nellie-david-launch.mp4">Download the video</a> instead.
+</video>
+
+*This 7-minute video demonstrates how to launch and navigate your Codespace environment.*
+
+---
+
 ## What You'll Get
 
 - **Instant Environment**: Pre-configured Linux environment with bioinformatics tools
