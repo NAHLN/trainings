@@ -1,0 +1,10 @@
+# Main navigation links
+main:
+  - title: "Quick Start"
+    url: /quick-start/
+  - title: "Shell Beginner"
+    url: /shell-beginner/
+  - title: "Metagenomics"
+    url: /metagenomics/
+  - title: "Platforms"
+    url: /platforms/
