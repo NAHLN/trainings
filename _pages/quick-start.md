@@ -8,7 +8,6 @@ toc_sticky: true
 header:
   overlay_color: "#11999e"
 ---
-# header 1
 
 ## Launch Learning Environment
 
