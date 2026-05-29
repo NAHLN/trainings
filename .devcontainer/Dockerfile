@@ -30,6 +30,21 @@ RUN useradd -m -s /bin/bash codespace && \
     mkdir -p /home/codespace/dc_workshop/docs
 
 # =============================================================================
+# Restore man pages / pager for a natural CLI experience
+# (Debian minimal base ships no man reader, and may strip the page files)
+# =============================================================================
+RUN rm -f /etc/dpkg/dpkg.cfg.d/excludes && \
+    apt-get update && \
+    apt-get install -y --no-install-recommends \
+        man-db \
+        manpages \
+        less && \
+    apt-get install -y --reinstall --no-install-recommends \
+        bash coreutils grep sed gawk findutils tar gzip util-linux procps && \
+    rm -rf /var/lib/apt/lists/*
+
+
+# =============================================================================
 # User section: install conda environment as codespace (allows future installs)
 # =============================================================================
 
