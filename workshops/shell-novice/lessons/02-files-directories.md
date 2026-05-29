@@ -86,10 +86,10 @@ It is written as a single slash `/`; this is the leading slash in
 `/home/codespace`.
 
 Below the top level `/` are several other directories:
-`bin` (which is where some built-in programs are stored),
-`workspaces` (for this holds **trainings**),
-`home` (where users' personal directories are located),
-`tmp` (for temporary files that don't need to be stored long-term),
+* `bin` (which is where some built-in programs are stored),
+* `workspaces` (this holds **trainings**),
+* `home` (where users' personal directories are located),
+* `tmp` (for temporary files that don't need to be stored long-term),
 and so on.
 
 We know that our current working directory `/home/codespace` is stored inside `/home`
