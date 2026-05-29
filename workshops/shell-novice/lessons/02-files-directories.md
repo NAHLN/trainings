@@ -86,10 +86,10 @@ It is written as a single slash `/`; this is the leading slash in
 `/home/codespace`.
 
 Below the top level `/` are several other directories:
-`bin` (which is where some built-in programs are stored),
-`workspaces` (for this holds **trainings**),
-`home` (where users' personal directories are located),
-`tmp` (for temporary files that don't need to be stored long-term),
+* `bin` (which is where some built-in programs are stored),
+* `workspaces` (this holds **trainings**),
+* `home` (where users' personal directories are located),
+* `tmp` (for temporary files that don't need to be stored long-term),
 and so on.
 
 We know that our current working directory `/home/codespace` is stored inside `/home`
@@ -875,43 +875,38 @@ Nelle can see what files she has using the command:
 
 This command is a lot to type,
 but she can let the shell do most of the work through what is called **tab completion**.
-If she types:
-
-~~~
-○ /workspaces/trainings/workshops/shell-novice/shell-lesson-data $ ls nor
-~~~
+Watch the following to see how to use:
 
 
-and then presses <kbd>Tab</kbd> (the tab key on her keyboard),
-the shell automatically completes the directory name for her:
+#### screenshot of tab completion: north-pacific-gyre
 
-~~~
-○ /workspaces/trainings/workshops/shell-novice/shell-lesson-data $ ls north-pacific-gyre/
-~~~
+![ls nor tab](img/ls_nor_tab.gif)
+
+Notice in the animated gif above, the black box shows typing and <kbd>⇥</kbd>, which means <kbd>TAB</kbd>.
+
+#### screenshot of double tab completion: north-pacific-gyre directory contens
+
+Pressing <kbd>Tab</kbd> once more does nothing, but TWICE more brings up a list of all the files inside `north-pacific-gyre`:
+
+![ls nor tab](img/ls_nor_tab_tab_tab_contents.gif)
+
+#### narrow down to the file you want using <kbd>tab<kbd>
+
+![narrow down](img/tab_completion_narrow_down.gif)
+
+#### The play-by-play:
+
+* `ls nor` <kbd>TAB</kbd> - autocomplete `nor` => `north-pacific-gyre/`
+*  <kbd>TAB</kbd><kbd>TAB</kbd> - double-TAB list available completions (whole subdirectory)
+* Type <kbd>g</kbd> to narrow down to files/directories that start with 'g'; then
+* <kbd>TAB</kbd> - Automplete `north-pacific-gyre/g` => `north-pacific-gyre/goo`
+* <kbd>TAB</kbd><kbd>TAB</kbd> - double-TAB list available completions: `goostats.sh` and `goodiff.sh`
+* Type <kbd>s</kbd> to narrow down further; then
+* <kbd>TAB</kbd> - Automplete `north-pacific-gyre/goos` => `north-pacific-gyre/goostats.sh`
+* Hit <kbd>Return</kbd> to `ls` the completed path
 
 
-Pressing <kbd>Tab</kbd> again does nothing,
-since there are multiple possibilities;
-pressing <kbd>Tab</kbd> twice brings up a list of all the files.
-
-If Nelle then presses <kbd>G</kbd> and then presses <kbd>Tab</kbd> again,
-the shell will append 'goo' since all files that start with 'g' share
-the first three characters 'goo'.
-
-~~~
-○ /workspaces/trainings/workshops/shell-novice/shell-lesson-data $ ls north-pacific-gyre/goo
-~~~
-
-<a id="bottom"></a>
-To see all of those files, she can press <kbd>Tab</kbd> twice more.
-~~~
-ls north-pacific-gyre/goo
-goodiff.sh   goostats.sh
-~~~
-
-
-This is called **tab completion**,
-and we will see it in many other tools as we go on.
+This is called **tab completion**, practice this on your own to get a hang of the rhythm.
 
 [Arguments]: https://swcarpentry.github.io/shell-novice/reference.html#argument
 
