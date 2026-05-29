@@ -1,5 +1,5 @@
 {
-  "name": "Metagenomics Analysis (Python + Micromamba)",
+  "name": "Training Codespace – 2 cores",
 
   // Use pre-built image from GitHub Actions workflow
   // Built from Dockerfile.prebuilt: python:3.9-bullseye + micromamba
