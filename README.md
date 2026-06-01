@@ -1,13 +1,5 @@
 Click here to start: [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/NAHLN/trainings?quickstart=1)
 
-# Codespace Workshops for Linux and NGS Bioinformatics Workflows
-
-These trainings and associated lessons are adapted from the popular [datacarpentry project](https://datacarpentry.org) to be easily executed in Github Codespaces.  However, 
-they can also be used on a Cloud Server or your own institutional HPC with minimal changes.
-
-These trainings are geared toward developing a working knowledge of bioinformatics tools, Linux and command literacy, and understanding of NGS analysis core concepts - especially those related to metagenomics and pathogen detection.
-
-The content and presentation of the lessons strive for a balance between the lesson objectives and the technical steps needed to accomplish them. Therefore, some steps have been done for you to make learning smoother.  The technical steps are important to learn, however, and will be included in focused vignettes (Software installation, using and tracking progress with Git, and File/Folder orientation).
 
 ## Getting started
 
