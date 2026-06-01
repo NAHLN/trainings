@@ -1,4 +1,4 @@
-Click here to start: [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/NAHLN/trainings?quickstart=1)
+Quickstart (to launch a Linux environment): [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/NAHLN/trainings?quickstart=1)
 
 
 ## Getting started
